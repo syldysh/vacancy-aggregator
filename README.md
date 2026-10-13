@@ -15,9 +15,9 @@
 
 ## About the project
 
-I built this project to make job market data easier to explore. The application receives vacancies from the open API of [Trudvsem](https://trudvsem.ru/), saves them in a PostgreSQL database, and shows them in a simple web interface.
+This is my personal side project for working with job vacancies in one place. I started it because a job search often means opening many pages and using the same filters again and again. I wanted a small service where I could load vacancies, narrow down the results, and compare them on one screen.
 
-Instead of checking vacancies one by one, a user can search the collected data, combine several filters, compare salaries, and open the original vacancy page. For me, this project was also a practical way to learn how a complete web application works: from an external API and database migrations to REST endpoints and a browser interface.
+The application receives data from the open API of [Trudvsem](https://trudvsem.ru/), saves it in PostgreSQL, and shows it in a simple web interface. A user can search the collected vacancies, combine several filters, compare salaries, and open the original vacancy page.
 
 ## How it works
 
@@ -139,8 +139,8 @@ project/
 └── compose.yaml
 ```
 
-## What I practised
+## What I built
 
-This project helped me practise working with an external API, mapping JSON data to Java objects, designing a database model, writing search queries, and separating a Spring application into controller, service, and repository layers. I also added integration and unit tests to check the main parts of the application.
+I built the project as a small full-stack service. Spring Boot handles requests to the external API and the application logic, PostgreSQL stores the vacancies, and Liquibase keeps the database structure consistent. I separated the backend into controller, service, and repository layers and added tests for the main parts of the application.
 
-The vacancy data belongs to its original providers and is accessed through the public Trudvsem API. This repository is an educational project.
+The vacancy data belongs to its original providers and is accessed through the public Trudvsem API.
